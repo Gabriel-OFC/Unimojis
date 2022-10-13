@@ -25,8 +25,10 @@ public class PlayerChat implements Listener {
     public void onChat(final AsyncPlayerChatEvent event) {
 
         for (final Unimoji emoji : this.unimojiService.getEmojis()) {
-            if (!event.getMessage().contains(emoji.getIdentifier())) continue;
-            event.setMessage(event.getMessage().replace(emoji.getIdentifier(), emoji.getTerm()));
+
+            if (event.getMessage().contains(emoji.getTerm())) {
+                event.setMessage(event.getMessage().replace(emoji.getTerm(), emoji.getUnicode()));
+            }
         }
     }
 }

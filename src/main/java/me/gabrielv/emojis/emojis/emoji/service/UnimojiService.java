@@ -30,6 +30,7 @@ public class UnimojiService {
     private void registerEmojis() {
 
         for (final String key : this.config.getConfigurationSection("Emojis").getKeys(false)) {
+            System.out.println("Registered");
             this.addEmoji(new Unimoji(
                     this.plugin,
                     key
