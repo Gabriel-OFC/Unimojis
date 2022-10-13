@@ -1,0 +1,5 @@
+name: Unimojis
+version: ${project.version}
+main: me.gabrielv.emojis.emojis.Emojis
+authors: [ GabrielV ]
+description: Custom Emojis plugin using unicode!
